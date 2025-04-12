@@ -1,33 +1,29 @@
-<!DOCTYPEHTML>
+<!DOCTYPE html>
 
 <html>
     <head>
         <title>
-            Travel Recommendation
+            Travel Bloom
         </title>
+        <link rel="stylesheet" href="./travel_recommendation.css">
     </head>
     <body>
-        <nav>
-            <div id="home">
-                <div class="topdiv">
-                    <ul>
-                    <li><a class="topmenu" href="#about-me">Home</a></li>
-                    <li><a class="topmenu" href="#skills">About us</a></li>
-                    <li><a class="topmenu" href="#projects">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div id="search">
-                    <ul>
-                        <li><input type="text" id="search bar" placeholder="Enter location"></li>
-                        <li><button id="btnSearch">Search</button>
-                        <li><button id="btClear">Clear</button>
-                    </ul>    
-                </div>
+        <nav class="navbar">
+            <div id="logo">Travel Bloom</div>
+            <div class="nav-links">
+                <a class="topmenu" href="#home">Home</a>
+                <a class="topmenu" href="./about.html">About us</a>
+                <a class="topmenu" href="./contact">Contact Us</a>
+            </div>
+            <div class="search-container" id="search-container">
+                <input type="text" id="search-input" placeholder="Enter a destination or keyword">
+                <button id="search-btn">Search</button>
+                <button id="clear-btn">Clear</button>    
             </div>
         </nav>
-        <div class="container">
-        <section id="page">
-        <div class="introduction">
+        <section id="home-page" class="page active">
+        <div class="hero">
+            <div class="hero-content">
             <h1> EXPLORE DREAM DESTINATION </h1>
             <p>Welcome to your ultimate travel guide!
                  Whether you're dreaming of sun-kissed beaches, 
@@ -38,11 +34,8 @@
                  spots to underrated getaways, discover places that 
                  suit every kind of traveler.</P>
             </div>
-            <div>
-            <img src=./travel.jpg width="60px" height="80px">
-            </div>
-        </section>
         </div>
+        </section>
     
     </body>
 </html>
