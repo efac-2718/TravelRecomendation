@@ -110,16 +110,6 @@ body {
     margin-bottom: 30px;
 }
 
-.recomendations {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 50px;
-}
-
-
-
 .social-icons {
     position: fixed;
     left: 0;
@@ -286,4 +276,38 @@ body {
 
 .submit-btn:hover {
     background-color: #2980b9;
+}
+
+.recommendation-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.recommendation-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.recommendation-card h3 {
+    margin: 10px 0;
+    color: #2c3e50;
+}
+
+.recommendation-card p {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+
+.recommendations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
 }
