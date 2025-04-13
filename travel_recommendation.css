@@ -17,6 +17,7 @@ body {
     padding: 15px 50px;
     background-color: #2c3e50;
     color: white;
+   
 }
 
 .logo {
@@ -26,7 +27,8 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 50px;
+    margin-left: 350px;
 }
 
 .nav-links a {
@@ -43,5 +45,245 @@ body {
 .search-container {
     display: flex;
     gap: 10px;
+    margin-left: auto;
 }
 
+.search-container input {
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+}
+
+.search-container button {
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+
+}
+
+.search-container button:hover {
+    background-color: #2980b9;
+}
+
+.hero {
+    background-image: url('https://raw.githubusercontent.com/efac-2718/images/refs/heads/main/travel.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.recomendations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+}
+
+
+
+.social-icons {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    bottom: 0;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    z-index: 999;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #3498db;
+}
+
+.hero1 {
+    background-image: url('https://raw.githubusercontent.com/efac-2718/images/refs/heads/main/travel.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: left;
+    color: white;
+    justify-content: left;
+    text-align: left;
+    position: relative;
+}
+
+.hero1::before {
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+
+}
+
+.hero-about {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.hero-about h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    margin-left: 80px;
+    margin-top: 40px;
+}
+
+.hero-about p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    margin-left: 80px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.team-container h2 {
+    margin-top: 100px;
+}
+
+.team-member {
+    background-color: rgba(51, 90, 88, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    margin-left: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.team-member h3 {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    margin-left: 0px;
+    color: #ffffff;
+}
+
+.team-member .role {
+    font-weight: bold;
+    color: rgb(139, 212, 23);
+    margin-bottom: 10px;
+}
+.contact-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.contact-container h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.contact-container p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #7f8c8d;
+}
+
+#contact-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    padding: 12px 30px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
