@@ -8,6 +8,7 @@
 body {
     background-color: #f5f5f5;
     color: #333;
+    
 }
 
 .navbar {
@@ -23,6 +24,7 @@ body {
 .logo {
     font-size: 24px;
     font-weight: bold;
+    
 }
 
 .nav-links {
@@ -70,11 +72,12 @@ body {
 }
 
 .hero {
-    background-image: url('https://raw.githubusercontent.com/efac-2718/images/refs/heads/main/travel.jpg');
+    background-image: url('https://raw.githubusercontent.com/efac-2718/images/refs/heads/main/high.jpg');
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     color: white;
     justify-content: center;
@@ -184,6 +187,7 @@ body {
     flex-wrap: wrap;
     gap: 30px;
     margin-top: 50px;
+    margin-bottom: 10px;
 }
 
 .team-container h2 {
@@ -215,6 +219,12 @@ body {
     color: rgb(139, 212, 23);
     margin-bottom: 10px;
 }
+
+#contact-page{
+    background-color: #7f8c8d;
+    padding-top: 10px;
+}
+
 .contact-container {
     max-width: 800px;
     margin: 50px auto;
@@ -230,7 +240,7 @@ body {
 .contact-container p {
     text-align: center;
     margin-bottom: 30px;
-    color: #7f8c8d;
+    color: #2c3e50;
 }
 
 #contact-form {
@@ -306,8 +316,24 @@ body {
 
 .recommendations {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     gap: 30px;
-    padding: 50px;
+    padding: 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+
+footer {
+    display:flex;
+    align-items: left;
+    margin-bottom: 0;
+    background-color: #333;
+    color: white;
+    height: 60px;
+}
+
+footer p {
+    margin-top: 30px;
 }

@@ -9,32 +9,40 @@ fetch('travel_recommendation_api.json')
   })
   .catch(error => console.error('Error:', error));
 
-// Search functionality
-document.getElementById('search-btn').addEventListener('click', () => {
-  const searchTerm = document.getElementById('search-input').value.trim().toLowerCase();
-  if (!travelData) return alert('Data not loaded yet');
+document.getElementById('search-btn').addEventListener('click', () =>filterSearchData());
 
-  let results = [];
-  
-  if (searchTerm.match(/beach(es)?/)) {
-    results = travelData.beaches;
-  } else if (searchTerm.match(/temple(s)?/)) {
-    results = travelData.temples;
-  } else if (searchTerm.match(/countr(y|ies)/)) {
-    results = travelData.countries.flatMap(country => country.cities);
-  } else {
-    const countryMatch = travelData.countries.find(c => c.name.toLowerCase() === searchTerm);
-    results = countryMatch ? countryMatch.cities : [];
-  }
+//Filter search data
+function filterSearchData(){
+    const userInput = document.getElementById('search-input').value.trim().toLowerCase();
+    if(!travelData){
+        return alert('Data not loaded yet');
+    }
 
-  if (results.length === 0) return alert('No results found');
-  displayRecommendations(results);
-});
+    let results = [];
+
+    if(userInput.match(/beach(es)?/)){
+        results = travelData.beaches;
+    } else if (userInput.match(/temple(s)?/)){
+        results = travelData.temples;
+    } else if (userInput.match(/countr(y|ies)/)){
+        results = travelData.countries.flatMap(country => country.cities);
+    } else {
+        const countryMatch = travelData.countries.find(c => c.name.toLowerCase() === userInput);
+        results = countryMatch ? countryMatch.cities : [];
+    }
+
+    if (results.length === 0) return alert('No results found');
+    displayRecommendations(results);
+}
 
 // Display recommendations
 function displayRecommendations(items) {
   const container = document.getElementById('recommendations-container');
   container.innerHTML = '';
+  const hero = document.getElementsByClassName('hero')[0];
+  if (hero) {
+    hero.style.height = "auto";
+  }
   
   items.forEach(item => {
     const card = document.createElement('div');
@@ -52,4 +60,8 @@ function displayRecommendations(items) {
 document.getElementById('clear-btn').addEventListener('click', () => {
   document.getElementById('recommendations-container').innerHTML = '';
   document.getElementById('search-input').value = '';
+  const hero = document.getElementsByClassName('hero')[0];
+  if (hero) {
+    hero.style.height = "100vh";
+  }
 });
